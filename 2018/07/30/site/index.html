@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>site | Sylolol Site</title>
+  <title>谈一谈我最近做统计的感受 | Sylolol Site</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="独孤的漫步者">
+  <meta name="description" content="主要插件 统计页面，主要的目的就是对后台给的数据做一个好的展示。就不得不说一下，图标控件：  echart  highcharts chart  Echarts 百度的Echarts，去年也有一些使用，只不过比较少，因为当时觉得自带的主题几级提示不符合我们的色调，颜色这种东西如果没有设计把控还是比较难的。但是，等待着Echarts3.0来了，我们团队觉得这个色系和操作符合我们的系统，于是将所有的产">
+<meta name="keywords" content="echart,highchart,chart">
 <meta property="og:type" content="article">
-<meta property="og:title" content="site">
+<meta property="og:title" content="谈一谈我最近做统计的感受">
 <meta property="og:url" content="http://yoursite.com/2018/07/30/site/index.html">
 <meta property="og:site_name" content="Sylolol Site">
-<meta property="og:description" content="独孤的漫步者">
+<meta property="og:description" content="主要插件 统计页面，主要的目的就是对后台给的数据做一个好的展示。就不得不说一下，图标控件：  echart  highcharts chart  Echarts 百度的Echarts，去年也有一些使用，只不过比较少，因为当时觉得自带的主题几级提示不符合我们的色调，颜色这种东西如果没有设计把控还是比较难的。但是，等待着Echarts3.0来了，我们团队觉得这个色系和操作符合我们的系统，于是将所有的产">
 <meta property="og:locale" content="zh-CH">
-<meta property="og:updated_time" content="2018-07-30T07:15:33.296Z">
+<meta property="og:updated_time" content="2018-07-30T08:17:50.630Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="site">
-<meta name="twitter:description" content="独孤的漫步者">
+<meta name="twitter:title" content="谈一谈我最近做统计的感受">
+<meta name="twitter:description" content="主要插件 统计页面，主要的目的就是对后台给的数据做一个好的展示。就不得不说一下，图标控件：  echart  highcharts chart  Echarts 百度的Echarts，去年也有一些使用，只不过比较少，因为当时觉得自带的主题几级提示不符合我们的色调，颜色这种东西如果没有设计把控还是比较难的。但是，等待着Echarts3.0来了，我们团队觉得这个色系和操作符合我们的系统，于是将所有的产">
   
     <link rel="alternative" href="/atom.xml" title="Sylolol Site" type="application/atom+xml">
   
@@ -151,20 +152,33 @@
         
   
     <h1 class="article-title" itemprop="name">
-      site
+      谈一谈我最近做统计的感受
     </h1>
   
 
         
         <a href="/2018/07/30/site/" class="archive-article-date">
-  	<time datetime="2018-07-30T07:15:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
+  	<time datetime="2018-07-30T07:15:33.296Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p><strong>主要插件</strong></p>
+<p>统计页面，主要的目的就是对后台给的数据做一个好的展示。就不得不说一下，图标控件：</p>
+<ul>
+<li><a href="http://echarts.baidu.com/" target="_blank" rel="noopener">echart</a> </li>
+<li><a href="http://www.hcharts.cn/" target="_blank" rel="noopener">highcharts</a></li>
+<li><a href="https://chartjs.bootcss.com/" target="_blank" rel="noopener">chart</a></li>
+</ul>
+<p><strong>Echarts</strong></p>
+<p>百度的Echarts，去年也有一些使用，只不过比较少，因为当时觉得自带的主题几级提示不符合我们的色调，颜色这种东西如果没有设计把控还是比较难的。但是，等待着Echarts3.0来了，我们团队觉得这个色系和操作符合我们的系统，于是将所有的产品都改成了Echarts，最开始使用的时候，也是require来请求某个图表的js进行使用，后来统一进行反而觉得复杂了，有重新走了直接调用的版本。接下来我说一下，我对Echarts里面常用option的意思。</p>
+<p><strong>Option</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> option = &#123;</span><br><span class="line">    baseOption:&#123;<span class="comment">//用来放默认的配置属性</span></span><br><span class="line">      title: &#123;</span><br><span class="line">        show:<span class="literal">false</span>,<span class="comment">//是否显示图表的标题</span></span><br><span class="line">        text: <span class="string">''</span>,<span class="comment">//图表的标题</span></span><br><span class="line">        left:<span class="string">'center'</span><span class="comment">//标题所在位置</span></span><br><span class="line">      &#125;,</span><br><span class="line">      tooltip: &#123;<span class="comment">//图表的提示工具</span></span><br><span class="line">        show: <span class="literal">true</span>,<span class="comment">//是否显示提示框</span></span><br><span class="line">        formatter:<span class="string">'&#123;b0&#125;: &#123;c0&#125;&lt;br /&gt;&#123;b1&#125;: &#123;c1&#125;'</span><span class="comment">//提示框的展示形式，还可以写js方法做处理</span></span><br><span class="line">      &#125;,</span><br><span class="line">      legend: &#123;<span class="comment">//图例</span></span><br><span class="line">        itemGap:<span class="number">5</span>,<span class="comment">//图例每项之间的间隔。横向布局时为水平间隔，纵向布局时为纵向间隔</span></span><br><span class="line">        data: [<span class="string">'图例1'</span>,<span class="string">'图例2'</span>],<span class="comment">//假如下面series里还有名称的话要和图例的名称顺序保持一致</span></span><br><span class="line">        bottom:<span class="string">'0%'</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      color:[<span class="string">'#aaa'</span>,<span class="string">'#bbbb'</span>],<span class="comment">//颜色配置，不管是什么图颜色从开始到结束的颜色值</span></span><br><span class="line">      grid: &#123;<span class="comment">//图表的位置（好比一个div）</span></span><br><span class="line">        left: <span class="string">'3%'</span>,<span class="comment">//图表距离左侧3%</span></span><br><span class="line">        right: <span class="string">'4%'</span>,<span class="comment">//图表距离右侧3%</span></span><br><span class="line">        bottom: <span class="string">'18%'</span>,<span class="comment">//图表距离底部3%</span></span><br><span class="line">        top:<span class="string">'12%'</span>,<span class="comment">//图表距离上部3%</span></span><br><span class="line">        containLabel: <span class="literal">true</span><span class="comment">//grid 区域是否包含坐标轴的刻度标签，在无法确定坐标轴标签的宽度，容器有比较小无法预留较多空间的时候，可以设为 true 防止标签溢出容器。</span></span><br><span class="line">      &#125;,</span><br><span class="line">      xAxis: [&#123;</span><br><span class="line">        type: <span class="string">'category'</span>,<span class="comment">//X为类目轴，适用于离散的类目数据，为该类型时必须通过 data 设置类目数据</span></span><br><span class="line">        boundaryGap: <span class="literal">false</span>,<span class="comment">//坐标轴两边留白也可写做 ['20%', '20%']</span></span><br><span class="line">        axisLabel:&#123;<span class="comment">//坐标轴刻度标签的相关设置。</span></span><br><span class="line">          interval:<span class="number">1</span>,<span class="comment">//坐标轴刻度标签的显示间隔</span></span><br><span class="line">          rotate:<span class="number">20</span>,<span class="comment">//坐标轴名字旋转读书</span></span><br><span class="line">        &#125;,</span><br><span class="line">        data: [<span class="string">'数据1'</span>,<span class="string">'数据2'</span>],<span class="comment">//类目的值</span></span><br><span class="line">      &#125;],</span><br><span class="line">      yAxis: [&#123;</span><br><span class="line">        type: <span class="string">'value'</span><span class="comment">//X为数值轴</span></span><br><span class="line">      &#125;],</span><br><span class="line">      series:[&#123;</span><br><span class="line">          type:<span class="string">'line'</span>,<span class="comment">//图表类型，折线，bar，柱状等等,</span></span><br><span class="line">          data:[&#123;</span><br><span class="line">              name:<span class="string">'图例1'</span>,<span class="comment">//图例名字1</span></span><br><span class="line">              value:[<span class="number">2</span>,<span class="number">5</span>]<span class="comment">//[数据1的值，数据2的值]</span></span><br><span class="line">             &#125;,&#123;</span><br><span class="line">              name:<span class="string">'图例2'</span>,<span class="comment">//图例名字2</span></span><br><span class="line">              value:[<span class="number">5</span>,<span class="number">8</span>]<span class="comment">//[数据1的值，数据2的值]</span></span><br><span class="line">         &#125;]</span><br><span class="line">      &#125;]</span><br><span class="line">    &#125;,</span><br><span class="line">    media: [<span class="comment">//用于响应式的图表的样式，东西跟上面的是一样的，不过多了一个query用来限制宽度高度</span></span><br><span class="line">      &#123;</span><br><span class="line">        query: &#123;</span><br><span class="line">          maxWidth: <span class="number">625</span>,<span class="comment">//宽度小于625时会走这里面的option设置，覆盖上面默认的</span></span><br><span class="line">        &#125;,</span><br><span class="line">        option:&#123;</span><br><span class="line">          title: &#123;</span><br><span class="line">            textStyle:&#123;</span><br><span class="line">              fontSize:<span class="number">13</span>,<span class="comment">//这是以图表的标题为例子</span></span><br><span class="line">            &#125;</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">    ]</span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure></p>
+<p>hightchart.js和chart.js用到的少了，但是hightchars容易上手，照着他的实例来就没问题，这俩就不做解释了。</p>
+<h2 id="过程中遇到的问题"><a href="#过程中遇到的问题" class="headerlink" title="过程中遇到的问题"></a>过程中遇到的问题</h2><p><strong>说个苹果上的问题，当你用了响应式布局以后，手机上会用着很卡顿，需要在css上加上一句</strong><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-tag">body</span>&#123; </span><br><span class="line">     <span class="attribute">-webkit-text-size-adjust</span>:none;</span><br><span class="line">     <span class="attribute">-webkit-overflow-scrolling</span>:touch</span><br><span class="line">&#125;</span><br><span class="line"> <span class="comment">/*这样就可以有效的解决掉，手机上卡的问题。*/</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>当数据繁重，需要处理多时，页面的请求会变得很慢，这时候就是需要队列来处理了</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</span><br><span class="line">      <span class="comment">// 声明一个jquery空对象，这个对象用来存放我们的队列</span></span><br><span class="line">      <span class="keyword">var</span> ajaxOrder = $(&#123;&#125;);</span><br><span class="line">      $.ajaxOrder = <span class="function"><span class="keyword">function</span>(<span class="params"> opts </span>) </span>&#123;</span><br><span class="line">          <span class="keyword">var</span> jqXHR,</span><br><span class="line">              dfd = $.Deferred(),</span><br><span class="line">              promise = dfd.promise();</span><br><span class="line">          <span class="comment">// 执行我们的ajax查询操作</span></span><br><span class="line">          ajaxOrder.queue( doRequest );</span><br><span class="line">          <span class="comment">// 添加中断ajax方法</span></span><br><span class="line">          promise.abort = <span class="function"><span class="keyword">function</span>(<span class="params"> statusText </span>) </span>&#123;</span><br><span class="line">              <span class="comment">// 判断ajax是否在运行,如果有正在运行ajax，就将其结束掉ajax</span></span><br><span class="line">              <span class="keyword">if</span> ( jqXHR ) &#123;</span><br><span class="line">                  <span class="keyword">return</span> jqXHR.abort( statusText );</span><br><span class="line">              &#125;</span><br><span class="line">              <span class="comment">// 将执行完毕的ajax从队列中删除</span></span><br><span class="line">              <span class="keyword">var</span> queue = ajaxOrder.queue(),</span><br><span class="line">                  index = $.inArray( doRequest, queue );</span><br><span class="line">              <span class="comment">// 判断队列中是否存在执行完毕ajax，如有就将其从队列中剔除</span></span><br><span class="line">              <span class="keyword">if</span> ( index &gt; <span class="number">-1</span> ) &#123;</span><br><span class="line">                  queue.splice( index, <span class="number">1</span> );</span><br><span class="line">              &#125;</span><br><span class="line"></span><br><span class="line">              <span class="comment">// 最后将ajax状态改为失败，rejectWith()作用相当于reject()</span></span><br><span class="line">              dfd.rejectWith( ajaxOpts.context || opts, [ promise, statusText, <span class="string">""</span> ]);</span><br><span class="line">              <span class="keyword">return</span> promise;</span><br><span class="line">          &#125;;</span><br><span class="line">          <span class="comment">// 执行我们的ajax查询操作方法</span></span><br><span class="line">          <span class="function"><span class="keyword">function</span> <span class="title">doRequest</span>(<span class="params"> next </span>) </span>&#123;</span><br><span class="line">              jqXHR = $.ajax( opts )</span><br><span class="line">                  .done( dfd.resolve )</span><br><span class="line">                  .fail( dfd.reject )</span><br><span class="line">                  .then( next, next );</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">return</span> promise;</span><br><span class="line">      &#125;;</span><br><span class="line">      &#125;)(jQuery);</span><br><span class="line">  <span class="comment">//请求调用</span></span><br><span class="line">  $.ajaxQueue(&#123;</span><br><span class="line">      url: url,</span><br><span class="line">      dataType: <span class="string">"json"</span>,</span><br><span class="line">      timeout:<span class="number">5000</span>,<span class="comment">//超时5秒自动结束，并且返回status为timeout</span></span><br><span class="line">  &#125;).done(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        callback(data,id);</span><br><span class="line">  &#125;).fail(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> _data = &#123;</span><br><span class="line">          status: <span class="string">"fail"</span></span><br><span class="line">  &#125;　　　</span><br><span class="line">      <span class="keyword">if</span> (data.statusText == <span class="string">'timeout'</span>) &#123;　　　　　</span><br><span class="line">          _data.status = <span class="string">'timeout'</span>;　　　　</span><br><span class="line">      &#125;</span><br><span class="line">      callback(_data,id);</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
       
 
       
@@ -203,6 +217,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">echart</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">highchart</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">chart</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -269,7 +302,7 @@
   
   
     <a href="/2018/07/30/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">hexo yilia 搭建gitpage</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -297,7 +330,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="site" data-title="site" data-url="http://yoursite.com/2018/07/30/site/"></div>
+	<div class="ds-thread" data-thread-key="site" data-title="谈一谈我最近做统计的感受" data-url="http://yoursite.com/2018/07/30/site/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -413,6 +446,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">echart highchart chart</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">echart/highchart/chart</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">echart</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">highchart</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">chart</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
