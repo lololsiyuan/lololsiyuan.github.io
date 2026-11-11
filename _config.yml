@@ -104,3 +104,8 @@ category_generator:
   per_page: 10
 tag_generator:
   per_page: 10
+
+# GitHub 热点页：构建时读取本地 deepseek-trending 的最新榜单
+trending:
+  enable: true
+  repo_path: H:/deepseekbot/deepseek-trending

@@ -36,6 +36,10 @@ menu:
         name: tags
         theme: solid
         link: /tags
+    GitHub热点:
+        name: github
+        theme: brands
+        link: /github-trending
 
 card:
     enable: true

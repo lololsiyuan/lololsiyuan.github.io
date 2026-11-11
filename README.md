@@ -50,3 +50,17 @@ npx hexo deploy          # 推送到 gh-pages
 | `themes/particlex/` | 主题（已随仓库提交，可直接改） |
 | `_config.yml` | 站点配置（含 deploy） |
 | `_config.particlex.yml` | 主题配置 |
+| `scripts/trending.js` | 构建时生成「GitHub 热点」页（/github-trending/） |
+
+## GitHub 热点页
+
+菜单里的「GitHub热点」由 `scripts/trending.js` 在构建时自动生成：读取本地
+`deepseek-trending` 仓库（`_config.yml` 的 `trending.repo_path`，默认
+`H:/deepseekbot/deepseek-trending`）里最新的日榜 / 周榜 / 月榜 Markdown，
+每个榜单先展示「全部语言」，其余语言折叠。
+
+更新流程：等 deepseek-trending 跑完一轮 → 重新构建部署即可，本页会自动变成最新榜单。
+
+```bash
+npx hexo clean && npx hexo generate && npx hexo deploy
+```
