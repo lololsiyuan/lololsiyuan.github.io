@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>一个将近毕业的IT程序员的感想 | lololsiyuan</title>
+    <meta name="author" content="lololsiyuan" />
+    <meta name="description" content="前端开发者的技术博客，记录代码与生活。" />
+    <meta name="keywords" content="前端, JavaScript, Vue, uni-app, 小程序" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar-me.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<link rel="stylesheet" href="/css/custom.css" />
+
+
+<meta name="generator" content="Hexo 8.1.2"></head>
+<body class="type-post">
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>LOLOLSIYUAN</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;分类</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;LOLOLSIYUAN</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">分类</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>一个将近毕业的IT程序员的感想</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2014/3/20
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E9%9A%8F%E6%83%B3/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                随想
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%A2%A6%E6%83%B3/" style="color: #ff7d73">
+                    梦想
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>小的时候，看过一部电视剧《男才女貌》，里面有我喜欢的男主角，邱石；那时候的我认为，我将来的生活就应该像他那样，努力拼搏一段时间，然后休息一段时间，那时候我认为CEO就和现在的项目经理是一样的；高考的时候，当面临第一次选择的时候，我找到心中唯一存在的东西，选择了软件工程。</p>
+<p>等到了大学之后呢，玩游戏，去网吧，那时候的节奏真的是三点一线。后来绩点不够了，去培训了，因为培训能够让自己的绩点长上来，还能早点工作，于是选择了培训，之后就步入了社会，从第一份工作，写网页慢慢做起，到现在变成一个web前端开发程序员，中间的经历有很多，也经历了失恋。慢慢的，发现自己成长了，如今还差3个月就毕业了，又开始犹犹豫豫的为自己以后发愁。不知道自己的方向在哪，身为一个90后，有着90后的通性：懒、没有耐力等。喜欢玩，如果可以就想去流浪，一边欣赏风景，一边体验生活；可是这根本不现实。</p>
+<p>就像一句话说的，理想很丰满，现实很骨感，你不知道以后会发生什么，现在在大帝都，感觉迷茫，空气不好，交通拥堵，自己熟悉，就想去南方闯一闯，可是自己有那资本么？不得而知。经常问自己，自己喜欢什么，答案也找不到，感觉自己就像一个马车，被现实拉着，因为现实，我们这样慢慢的生活着，所以天天想，夜夜想，我究竟以后要做什么，我现在要去做什么，年龄不小了，自己有做决定的能力了，扪心自问，我的兴趣，喜好在哪，我适合什么样的工作，想来想去，发现自己又回到了远点，因为自己想，无论什么都是可以说通的。90后的我们都是这样，遇到事首先是想，根本不是着手去做，现在是指想不做；于是我决定只做不想，顺应着现实，将自己的能力培养起来，多学几门编程语言、框架没有坏处，当我有资本去选择的时候，我再去选择。</p>
+<p>生活就像是温水煮青蛙，慢慢磨灭我们的那股冲劲，慢慢的，我们不得不去适应，或者说改变自己。虽然想了这么久，但是不知道自己选择是否正确，对我们每个人来说，谁都不想走弯路，但是路是自己走出来的，我应该去学会自己去选择，自己为自己的选择负责，做一个有担当的男人。</p>
+<p>或许程序不是我的未来，编程不是我的爱好，但是，我的成长是它们陪伴我走过来的，无论如何都不会变，永远是我成长中最重要的一部分。这条路未来不管怎么样，我都会慢慢走下去。</p>
+<p>最后别人送我的话：以后的一切都有可能，时刻位置准备。不到来的时候，不为之纠结，不要让它成为负担，做好当下事，抓住让自己进入行业，进而立足、发展的机会，这是最重要的事。程序员们，加油吧！</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2026 lololsiyuan
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;lololsiyuan
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
