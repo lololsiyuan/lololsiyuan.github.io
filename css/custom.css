@@ -12,3 +12,46 @@ body:not(.type-index) #main > #footer {
 .categories-tags {
   padding: 40px 0 10px;
 }
+
+/* GitHub 热点页 */
+.trending-intro {
+  margin: 8px 0 24px;
+  padding: 12px 18px;
+  border-left: 4px solid #8ec8ff;
+  background: #f2f8ff;
+  border-radius: 0 6px 6px 0;
+}
+.trending-intro p { margin: 3px 0; color: #5b6b7c; font-size: 14px; }
+.trending-period { margin: 34px 0 10px; }
+.trending-period h2 { margin: 0 0 4px; }
+.trending-period h3 { margin: 18px 0 6px; font-size: 16px; color: #4a5a6a; }
+.trending-meta { margin: 0 0 6px; color: #93a1b0; font-size: 13px; }
+.trending-scroll { overflow-x: auto; margin: 6px 0 14px; }
+.trending-scroll table:not(.hljs-ln) { min-width: 620px; margin: 0; }
+.trending-scroll table:not(.hljs-ln) td:nth-child(1),
+.trending-scroll table:not(.hljs-ln) th:nth-child(1) { width: 26%; }
+.trending-scroll table:not(.hljs-ln) td:nth-child(2),
+.trending-scroll table:not(.hljs-ln) th:nth-child(2) { width: 13%; }
+.trending-scroll table:not(.hljs-ln) td:nth-child(3),
+.trending-scroll table:not(.hljs-ln) th:nth-child(3) { width: 14%; }
+.trending-langs { margin: 6px 0 4px; }
+.trending-langs details {
+  margin: 8px 0;
+  border: 1px solid #e3ebf3;
+  border-radius: 8px;
+  padding: 6px 16px 2px;
+  background: #fbfdff;
+}
+.trending-langs summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #3d4f60;
+  padding: 6px 0;
+  outline: none;
+}
+.trending-langs details[open] summary { margin-bottom: 6px; }
+
+/* 窄屏下表格可横向滑动 */
+@media (max-width: 760px) {
+  .trending-scroll table:not(.hljs-ln) { min-width: 560px; white-space: nowrap; }
+}
