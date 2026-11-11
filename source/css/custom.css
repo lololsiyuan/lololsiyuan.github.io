@@ -1,0 +1,14 @@
+/* 站点自定义样式：让内容较少的内页把页脚压到底部 */
+body:not(.type-index) #main {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+}
+body:not(.type-index) #main > #footer {
+  margin-top: auto;
+}
+
+/* 标签/分类胶囊区域上下留白收一点 */
+.categories-tags {
+  padding: 40px 0 10px;
+}

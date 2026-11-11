@@ -1,0 +1,13 @@
+# Hexo
+public/
+.deploy*/
+db.json
+*.log
+
+# Dependencies
+node_modules/
+pnpm-lock.yaml
+
+# System
+.DS_Store
+Thumbs.db

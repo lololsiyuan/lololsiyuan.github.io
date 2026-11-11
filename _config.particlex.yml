@@ -1,0 +1,91 @@
+custom_css: /css/custom.css
+
+# ParticleX theme overrides
+avatar: /images/avatar-me.jpg
+
+background:
+    - /images/background.jpg
+
+loading: /images/loading.gif
+
+colors:
+    - "#ffa2c4"
+    - "#00bcd4"
+    - "#03a9f4"
+    - "#00a596"
+    - "#ff7d73"
+
+menu:
+    首页:
+        name: house
+        theme: solid
+        link: /
+    关于:
+        name: id-card
+        theme: solid
+        link: /about
+    归档:
+        name: box-archive
+        theme: solid
+        link: /archives
+    分类:
+        name: bookmark
+        theme: solid
+        link: /categories
+    标签:
+        name: tags
+        theme: solid
+        link: /tags
+
+card:
+    enable: true
+    description: |
+        前端开发者，写代码，也写点生活。
+        这里记录技术、项目与随想。
+    iconLinks:
+        GitHub:
+            name: github
+            theme: brands
+            link: https://github.com/lololsiyuan
+        邮箱:
+            name: envelope
+            theme: solid
+            link: mailto:lololsiyuan@163.com
+    friendLinks:
+
+footer:
+    since: 2022
+    ICP:
+        enable: false
+        code:
+        link:
+
+polyfill:
+    enable: true
+    features:
+        - default
+
+highlight:
+    enable: true
+    style: github
+
+math:
+    enable: false
+
+preview:
+    enable: true
+
+crypto:
+    enable: false
+
+search:
+    enable: true
+
+giscus:
+    enable: false
+gitalk:
+    enable: false
+waline:
+    enable: false
+twikoo:
+    enable: false
